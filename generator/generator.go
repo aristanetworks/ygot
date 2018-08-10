@@ -26,9 +26,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	log "github.com/golang/glog"
+	log "github.com/aristanetworks/glog"
+	"github.com/aristanetworks/ygot/ygen"
 	"github.com/openconfig/goyang/pkg/yang"
-	"github.com/openconfig/ygot/ygen"
 )
 
 const (
@@ -197,7 +197,7 @@ func main() {
 	// throwing an error if the set is empty.
 	generateModules := flag.Args()
 	if len(generateModules) == 0 {
-		log.Exitln("Error: no input modules specified")
+		log.Fatal("Error: no input modules specified")
 	}
 
 	// Determine the set of paths that should be searched for included
@@ -224,7 +224,7 @@ func main() {
 	}
 
 	if *outputFile != "" && *outputDir != "" {
-		log.Exitf("Error: cannot specify both outputFile (%s) and outputDir (%s)", *outputFile, *outputDir)
+		log.Fatalf("Error: cannot specify both outputFile (%s) and outputDir (%s)", *outputFile, *outputDir)
 	}
 
 	// Perform the code generation.
@@ -254,7 +254,7 @@ func main() {
 
 	generatedGoCode, err := cg.GenerateGoCode(generateModules, includePaths)
 	if err != nil {
-		log.Exitf("ERROR Generating Code: %s\n", err)
+		log.Fatalf("ERROR Generating Code: %s\n", err)
 	}
 
 	// If no output file is specified, we output to os.Stdout, otherwise
@@ -284,7 +284,7 @@ func main() {
 func openFile(fn string) *os.File {
 	fileOut, err := os.Create(fn)
 	if err != nil {
-		log.Exitf("Error: could not open output file: %v\n", err)
+		log.Fatalf("Error: could not open output file: %v\n", err)
 	}
 	return fileOut
 }
@@ -292,10 +292,10 @@ func openFile(fn string) *os.File {
 // syncFile synchronises the supplied os.File and closes it.
 func syncFile(fh *os.File) {
 	if err := fh.Sync(); err != nil {
-		log.Exitf("Error: could not sync file output: %v\n", err)
+		log.Fatalf("Error: could not sync file output: %v\n", err)
 	}
 
 	if err := fh.Close(); err != nil {
-		log.Exitf("Error: could not close output file: %v\n", err)
+		log.Fatalf("Error: could not close output file: %v\n", err)
 	}
 }

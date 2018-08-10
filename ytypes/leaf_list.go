@@ -19,8 +19,8 @@ import (
 	"reflect"
 
 	"github.com/openconfig/goyang/pkg/yang"
-	"github.com/openconfig/ygot/util"
-	"github.com/openconfig/ygot/ygot"
+	"github.com/aristanetworks/ygot/util"
+	"github.com/aristanetworks/ygot/ygot"
 )
 
 // Refer to: https://tools.ietf.org/html/rfc6020#section-7.7.

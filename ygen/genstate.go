@@ -20,9 +20,9 @@ import (
 	"sort"
 	"strings"
 
+	"github.com/aristanetworks/ygot/ygot"
 	"github.com/openconfig/gnmi/ctree"
 	"github.com/openconfig/goyang/pkg/yang"
-	"github.com/openconfig/ygot/ygot"
 )
 
 // genState is used to store the state that is created throughout the code

@@ -23,8 +23,8 @@ import (
 	"github.com/golang/protobuf/proto"
 	"github.com/kylelemons/godebug/pretty"
 
-	ocpb "github.com/openconfig/ygot/demo/protobuf_getting_started/ribproto/openconfig"
-	ocenums "github.com/openconfig/ygot/demo/protobuf_getting_started/ribproto/openconfig/enums"
+	ocpb "github.com/aristanetworks/ygot/demo/protobuf_getting_started/ribproto/openconfig"
+	ocenums "github.com/aristanetworks/ygot/demo/protobuf_getting_started/ribproto/openconfig/enums"
 )
 
 func TestProtoGenerate(t *testing.T) {

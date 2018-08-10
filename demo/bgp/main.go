@@ -20,25 +20,25 @@ package main
 import (
 	"fmt"
 
-	log "github.com/golang/glog"
-	oc "github.com/openconfig/ygot/exampleoc"
-	"github.com/openconfig/ygot/ygot"
+	log "github.com/aristanetworks/glog"
+	oc "github.com/aristanetworks/ygot/exampleoc"
+	"github.com/aristanetworks/ygot/ygot"
 )
 
 func main() {
 	bgp, err := CreateDemoBGPInstance()
 	if err != nil {
-		log.Exitf("Error in OpenConfig BGP demo: %v", err)
+		log.Fatalf("Error in OpenConfig BGP demo: %v", err)
 	}
 	json, err := EmitBGPJSON(bgp)
 	if err != nil {
-		log.Exitf("Error outputting JSON: %v", err)
+		log.Fatalf("Error outputting JSON: %v", err)
 	}
 	fmt.Println(json)
 
 	ietfjson, err := EmitRFC7951JSON(bgp)
 	if err != nil {
-		log.Exitf("Error outputting RFC7951 JSON: %v", err)
+		log.Fatalf("Error outputting RFC7951 JSON: %v", err)
 	}
 	fmt.Println(ietfjson)
 }

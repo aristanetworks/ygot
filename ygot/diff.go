@@ -18,9 +18,9 @@ import (
 	"fmt"
 	"reflect"
 
+	"github.com/aristanetworks/ygot/util"
 	"github.com/golang/protobuf/proto"
 	"github.com/kylelemons/godebug/pretty"
-	"github.com/openconfig/ygot/util"
 
 	gnmipb "github.com/openconfig/gnmi/proto/gnmi"
 	"github.com/openconfig/gnmi/value"

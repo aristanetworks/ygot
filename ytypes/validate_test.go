@@ -18,7 +18,7 @@ import (
 	"testing"
 
 	"github.com/openconfig/goyang/pkg/yang"
-	"github.com/openconfig/ygot/ygot"
+	"github.com/aristanetworks/ygot/ygot"
 )
 
 type Case1Leaf1ChoiceStruct struct {

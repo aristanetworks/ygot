@@ -23,12 +23,12 @@ import (
 	"sort"
 	"strings"
 
-	log "github.com/golang/glog"
+	log "github.com/aristanetworks/glog"
 
+	"github.com/aristanetworks/ygot/util"
+	"github.com/aristanetworks/ygot/ygot"
 	"github.com/openconfig/gnmi/ctree"
 	"github.com/openconfig/goyang/pkg/yang"
-	"github.com/openconfig/ygot/util"
-	"github.com/openconfig/ygot/ygot"
 )
 
 // YANGCodeGenerator is a structure that is used to pass arguments as to
@@ -150,12 +150,12 @@ type ProtoOpts struct {
 	// AnnotateSchemaPaths specifies whether the extensions defined in
 	// yext.proto should be used to annotate schema paths into the output
 	// protobuf file. See
-	// https://github.com/openconfig/ygot/blob/master/docs/yang-to-protobuf-transformations-spec.md#annotation-of-schema-paths
+	// https://github.com/aristanetworks/ygot/blob/master/docs/yang-to-protobuf-transformations-spec.md#annotation-of-schema-paths
 	AnnotateSchemaPaths bool
 	// AnnotateEnumNames specifies whether the extensions defined in
 	// yext.proto should be used to annotate enum values with their
 	// original YANG names in the output protobuf file.
-	// See https://github.com/openconfig/ygot/blob/master/docs/yang-to-protobuf-transformations-spec.md#annotation-of-enums
+	// See https://github.com/aristanetworks/ygot/blob/master/docs/yang-to-protobuf-transformations-spec.md#annotation-of-enums
 	AnnotateEnumNames bool
 	// NestedMessages indicates whether nested messages should be
 	// output for the protobuf schema. If false, a separate package
@@ -755,7 +755,7 @@ func mappableLeaf(e *yang.Entry) *yang.Entry {
 		// entry Type.
 		// TODO(robjs): Add this as an error case that can be handled by
 		// the caller directly.
-		log.Warningf("got unexpected nil value type for leaf %s (%s), entry: %v", e.Name, e.Path(), e)
+		log.Errorf("got unexpected nil value type for leaf %s (%s), entry: %v", e.Name, e.Path(), e)
 		return nil
 	}
 

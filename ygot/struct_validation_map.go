@@ -29,7 +29,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/openconfig/ygot/util"
+	"github.com/aristanetworks/ygot/util"
 )
 
 const (

@@ -7,7 +7,7 @@ import (
 
 	"github.com/kylelemons/godebug/pretty"
 	"github.com/openconfig/goyang/pkg/yang"
-	"github.com/openconfig/ygot/ygot"
+	"github.com/aristanetworks/ygot/ygot"
 
 	gpb "github.com/openconfig/gnmi/proto/gnmi"
 	scpb "google.golang.org/genproto/googleapis/rpc/code"

@@ -8,7 +8,7 @@ import (
 
 	"github.com/openconfig/goyang/pkg/yang"
 
-	log "github.com/golang/glog"
+	log "github.com/aristanetworks/glog"
 
 	gpb "github.com/openconfig/gnmi/proto/gnmi"
 	scpb "google.golang.org/genproto/googleapis/rpc/code"

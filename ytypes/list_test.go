@@ -24,8 +24,8 @@ import (
 	"github.com/kylelemons/godebug/pretty"
 	"github.com/openconfig/gnmi/errdiff"
 	"github.com/openconfig/goyang/pkg/yang"
-	"github.com/openconfig/ygot/util"
-	"github.com/openconfig/ygot/ygot"
+	"github.com/aristanetworks/ygot/util"
+	"github.com/aristanetworks/ygot/ygot"
 )
 
 var validListSchema = &yang.Entry{

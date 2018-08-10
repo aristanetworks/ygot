@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/openconfig/ygot/ygen"
+	"github.com/aristanetworks/ygot/ygen"
 )
 
 // Simple test case that ensures that the end-to-end ygot pipeline works

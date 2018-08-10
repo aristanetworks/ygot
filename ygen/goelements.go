@@ -19,8 +19,8 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/aristanetworks/ygot/ygot"
 	"github.com/openconfig/goyang/pkg/yang"
-	"github.com/openconfig/ygot/ygot"
 )
 
 const (

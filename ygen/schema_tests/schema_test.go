@@ -20,8 +20,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/openconfig/ygot/exampleoc"
-	"github.com/openconfig/ygot/ygot"
+	"github.com/aristanetworks/ygot/exampleoc"
+	"github.com/aristanetworks/ygot/ygot"
 )
 
 func TestSimpleListRename(t *testing.T) {

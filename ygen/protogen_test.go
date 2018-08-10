@@ -21,7 +21,7 @@ import (
 
 	"github.com/kylelemons/godebug/pretty"
 	"github.com/openconfig/goyang/pkg/yang"
-	"github.com/openconfig/ygot/testutil"
+	"github.com/aristanetworks/ygot/testutil"
 )
 
 func protoMsgEq(a, b *protoMsg) bool {

@@ -20,10 +20,10 @@ import (
 	"strconv"
 
 	"github.com/openconfig/goyang/pkg/yang"
-	"github.com/openconfig/ygot/util"
-	"github.com/openconfig/ygot/ygot"
+	"github.com/aristanetworks/ygot/util"
+	"github.com/aristanetworks/ygot/ygot"
 
-	log "github.com/golang/glog"
+	log "github.com/aristanetworks/glog"
 )
 
 // enumStringToValue returns the enum type value that enumerated string value

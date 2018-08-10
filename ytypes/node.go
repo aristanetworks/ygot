@@ -19,8 +19,8 @@ import (
 	"reflect"
 
 	"github.com/openconfig/goyang/pkg/yang"
-	"github.com/openconfig/ygot/util"
-	"github.com/openconfig/ygot/ygot"
+	"github.com/aristanetworks/ygot/util"
+	"github.com/aristanetworks/ygot/ygot"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 

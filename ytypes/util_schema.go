@@ -20,7 +20,7 @@ import (
 	"strings"
 
 	"github.com/openconfig/goyang/pkg/yang"
-	"github.com/openconfig/ygot/util"
+	"github.com/aristanetworks/ygot/util"
 )
 
 // validateLengthSchema validates whether the given schema has a valid length

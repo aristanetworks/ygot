@@ -20,13 +20,13 @@ package main
 import (
 	"fmt"
 
-	log "github.com/golang/glog"
+	log "github.com/aristanetworks/glog"
 	"github.com/golang/protobuf/proto"
 
-	ocpb "github.com/openconfig/ygot/demo/protobuf_getting_started/ribproto/openconfig"
-	ocenums "github.com/openconfig/ygot/demo/protobuf_getting_started/ribproto/openconfig/enums"
-	ocrpb "github.com/openconfig/ygot/demo/protobuf_getting_started/ribproto/openconfig/openconfig_rib_bgp"
-	ywpb "github.com/openconfig/ygot/proto/ywrapper"
+	ocpb "github.com/aristanetworks/ygot/demo/protobuf_getting_started/ribproto/openconfig"
+	ocenums "github.com/aristanetworks/ygot/demo/protobuf_getting_started/ribproto/openconfig/enums"
+	ocrpb "github.com/aristanetworks/ygot/demo/protobuf_getting_started/ribproto/openconfig/openconfig_rib_bgp"
+	ywpb "github.com/aristanetworks/ygot/proto/ywrapper"
 )
 
 func main() {
@@ -43,7 +43,7 @@ func main() {
 
 	b, err := proto.Marshal(rt)
 	if err != nil {
-		log.Exitf("Error marshalling proto: %v", err)
+		log.Fatalf("Error marshalling proto: %v", err)
 	}
 
 	fmt.Printf("%s\n", proto.MarshalTextString(rt))

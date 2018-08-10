@@ -27,10 +27,10 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/openconfig/ygot/ygot"
+	"github.com/aristanetworks/ygot/ygot"
 
-	log "github.com/golang/glog"
-	oc "github.com/openconfig/ygot/exampleoc"
+	log "github.com/aristanetworks/glog"
+	oc "github.com/aristanetworks/ygot/exampleoc"
 
 	gnmipb "github.com/openconfig/gnmi/proto/gnmi"
 )
@@ -39,17 +39,17 @@ func main() {
 	flag.Parse()
 	d, err := CreateAFTInstance()
 	if err != nil {
-		log.Exitf("Error creating device instance: %v", err)
+		log.Fatalf("Error creating device instance: %v", err)
 	}
 
 	for _, e := range []bool{true, false} {
 		g, err := renderToGNMINotifications(d, time.Now().Unix(), e)
 		if err != nil {
-			log.Exitf("Error creating notifications: %v", err)
+			log.Fatalf("Error creating notifications: %v", err)
 		}
 
 		if len(g) != 1 {
-			log.Exitf("Unexpected number of notifications returned %d", len(g))
+			log.Fatalf("Unexpected number of notifications returned %d", len(g))
 		}
 		fmt.Printf("%v\n", proto.MarshalTextString(g[0]))
 	}

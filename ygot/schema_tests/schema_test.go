@@ -24,9 +24,9 @@ import (
 	"github.com/kylelemons/godebug/pretty"
 	"github.com/openconfig/gnmi/errdiff"
 	"github.com/openconfig/gnmi/value"
-	"github.com/openconfig/ygot/exampleoc"
-	"github.com/openconfig/ygot/testutil"
-	"github.com/openconfig/ygot/ygot"
+	"github.com/aristanetworks/ygot/exampleoc"
+	"github.com/aristanetworks/ygot/testutil"
+	"github.com/aristanetworks/ygot/ygot"
 
 	gnmipb "github.com/openconfig/gnmi/proto/gnmi"
 )

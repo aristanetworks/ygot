@@ -18,9 +18,9 @@ import (
 	"fmt"
 	"reflect"
 
-	log "github.com/golang/glog"
+	log "github.com/aristanetworks/glog"
 	"github.com/openconfig/goyang/pkg/yang"
-	"github.com/openconfig/ygot/util"
+	"github.com/aristanetworks/ygot/util"
 )
 
 // Refer to: https://tools.ietf.org/html/rfc6020#section-9.2.

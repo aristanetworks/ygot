@@ -22,10 +22,10 @@ import (
 	"strconv"
 	"strings"
 
-	log "github.com/golang/glog"
+	log "github.com/aristanetworks/glog"
+	"github.com/aristanetworks/ygot/util"
+	"github.com/aristanetworks/ygot/ygot"
 	"github.com/openconfig/goyang/pkg/yang"
-	"github.com/openconfig/ygot/util"
-	"github.com/openconfig/ygot/ygot"
 )
 
 // Refer to: https://tools.ietf.org/html/rfc6020#section-7.6.
@@ -296,7 +296,7 @@ func findMatchingSchemasInUnion(ytype *yang.YangType, value interface{}) []*yang
 			ybt = ygot.ToPtr(yangBuiltinTypeToGoType(t.Kind))
 		}
 		if ybt == nil {
-			log.Warningf("no matching Go type for type %v in union value %s", t.Kind, util.ValueStr(value))
+			log.Errorf("no matching Go type for type %v in union value %s", t.Kind, util.ValueStr(value))
 			continue
 		}
 		if reflect.TypeOf(ybt).Kind() == reflect.TypeOf(value).Kind() {

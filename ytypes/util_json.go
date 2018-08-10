@@ -19,7 +19,7 @@ import (
 	"reflect"
 
 	"github.com/openconfig/goyang/pkg/yang"
-	"github.com/openconfig/ygot/util"
+	"github.com/aristanetworks/ygot/util"
 )
 
 // getJSONTreeValForField returns the JSON subtree of the provided tree that

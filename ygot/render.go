@@ -22,10 +22,10 @@ import (
 	"sort"
 	"strings"
 
+	"github.com/aristanetworks/ygot/util"
 	"github.com/golang/protobuf/proto"
 	"github.com/openconfig/gnmi/errlist"
 	"github.com/openconfig/gnmi/value"
-	"github.com/openconfig/ygot/util"
 
 	gnmipb "github.com/openconfig/gnmi/proto/gnmi"
 )

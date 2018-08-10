@@ -18,8 +18,8 @@ import (
 	"fmt"
 
 	"github.com/openconfig/goyang/pkg/yang"
-	"github.com/openconfig/ygot/util"
-	"github.com/openconfig/ygot/ygot"
+	"github.com/aristanetworks/ygot/util"
+	"github.com/aristanetworks/ygot/ygot"
 )
 
 // LeafrefOptions controls the behaviour of validation functions for leaf-ref

@@ -7,7 +7,7 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	"github.com/google/go-cmp/cmp"
-	"github.com/openconfig/ygot/ygot"
+	"github.com/aristanetworks/ygot/ygot"
 
 	gnmipb "github.com/openconfig/gnmi/proto/gnmi"
 )

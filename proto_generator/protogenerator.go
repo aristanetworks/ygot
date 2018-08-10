@@ -25,9 +25,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	log "github.com/golang/glog"
+	log "github.com/aristanetworks/glog"
+	"github.com/aristanetworks/ygot/ygen"
 	"github.com/openconfig/goyang/pkg/yang"
-	"github.com/openconfig/ygot/ygen"
 )
 
 var (
@@ -60,11 +60,11 @@ func main() {
 	// throwing an error if the set is empty.
 	generateModules := flag.Args()
 	if len(generateModules) == 0 {
-		log.Exitln("Error: no input modules specified")
+		log.Fatal("Error: no input modules specified")
 	}
 
 	if *outputDir == "" {
-		log.Exitln("Error: an output directory must be specified")
+		log.Fatal("Error: an output directory must be specified")
 	}
 
 	// Determine the set of paths that should be searched for included
@@ -114,18 +114,18 @@ func main() {
 
 	generatedProtoCode, err := cg.GenerateProto3(generateModules, includePaths)
 	if err != nil {
-		log.Exitf("%v\n", err)
+		log.Fatalf("%v\n", err)
 	}
 
 	for _, p := range generatedProtoCode.Packages {
 		fp := filepath.Join(append([]string{*outputDir}, p.FilePath[:len(p.FilePath)-1]...)...)
 		if err := os.MkdirAll(fp, 0755); err != nil {
-			log.Exitf("could not create directory %v, got error: %v", fp, err)
+			log.Fatalf("could not create directory %v, got error: %v", fp, err)
 		}
 
 		f, err := os.Create(filepath.Join(fp, p.FilePath[len(p.FilePath)-1]))
 		if err != nil {
-			log.Exitf("could not create file %v, got error: %v", fp, err)
+			log.Fatalf("could not create file %v, got error: %v", fp, err)
 		}
 		defer f.Close()
 

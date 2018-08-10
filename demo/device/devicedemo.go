@@ -21,26 +21,26 @@ import (
 	"encoding/json"
 	"fmt"
 
-	log "github.com/golang/glog"
-	oc "github.com/openconfig/ygot/exampleoc"
-	"github.com/openconfig/ygot/ygot"
+	log "github.com/aristanetworks/glog"
+	oc "github.com/aristanetworks/ygot/exampleoc"
+	"github.com/aristanetworks/ygot/ygot"
 )
 
 func main() {
 	dev, err := CreateDemoDeviceInstance()
 	if err != nil {
-		log.Exitf("Error in OpenConfig device demo: %v", err)
+		log.Fatalf("Error in OpenConfig device demo: %v", err)
 	}
 
 	json, err := EmitJSON(dev)
 	if err != nil {
-		log.Exitf("Error outputting device to JSON: %v", err)
+		log.Fatalf("Error outputting device to JSON: %v", err)
 	}
 	fmt.Println(json)
 
 	ietfjson, err := EmitRFC7951JSON(dev)
 	if err != nil {
-		log.Exitf("Error outtputing device to RFC7951 JSON: %v", err)
+		log.Fatalf("Error outtputing device to RFC7951 JSON: %v", err)
 	}
 	fmt.Println(ietfjson)
 }

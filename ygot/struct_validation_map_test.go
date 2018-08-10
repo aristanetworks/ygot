@@ -25,7 +25,7 @@ import (
 
 	"github.com/openconfig/gnmi/errdiff"
 	gnmipb "github.com/openconfig/gnmi/proto/gnmi"
-	"github.com/openconfig/ygot/testutil"
+	"github.com/aristanetworks/ygot/testutil"
 )
 
 const (

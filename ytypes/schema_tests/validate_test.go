@@ -25,14 +25,14 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/openconfig/ygot/experimental/ygotutils"
-	"github.com/openconfig/ygot/testutil"
-	"github.com/openconfig/ygot/util"
-	"github.com/openconfig/ygot/ygot"
-	"github.com/openconfig/ygot/ytypes"
+	"github.com/aristanetworks/ygot/experimental/ygotutils"
+	"github.com/aristanetworks/ygot/testutil"
+	"github.com/aristanetworks/ygot/util"
+	"github.com/aristanetworks/ygot/ygot"
+	"github.com/aristanetworks/ygot/ytypes"
 
 	gpb "github.com/openconfig/gnmi/proto/gnmi"
-	oc "github.com/openconfig/ygot/exampleoc"
+	oc "github.com/aristanetworks/ygot/exampleoc"
 	scpb "google.golang.org/genproto/googleapis/rpc/code"
 	spb "google.golang.org/genproto/googleapis/rpc/status"
 )

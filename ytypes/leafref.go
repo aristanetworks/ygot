@@ -21,9 +21,9 @@ import (
 	"reflect"
 	"strings"
 
-	log "github.com/golang/glog"
+	log "github.com/aristanetworks/glog"
 	"github.com/openconfig/goyang/pkg/yang"
-	"github.com/openconfig/ygot/util"
+	"github.com/aristanetworks/ygot/util"
 
 	gpb "github.com/openconfig/gnmi/proto/gnmi"
 )

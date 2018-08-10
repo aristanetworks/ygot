@@ -19,7 +19,7 @@ import (
 	"testing"
 
 	"github.com/openconfig/goyang/pkg/yang"
-	"github.com/openconfig/ygot/util"
+	"github.com/aristanetworks/ygot/util"
 )
 
 var (

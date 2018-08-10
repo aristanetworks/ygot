@@ -21,7 +21,7 @@ import (
 
 	"github.com/kylelemons/godebug/pretty"
 	"github.com/openconfig/goyang/pkg/yang"
-	"github.com/openconfig/ygot/util"
+	"github.com/aristanetworks/ygot/util"
 )
 
 // Refer to: https://tools.ietf.org/html/rfc6020#section-7.8.

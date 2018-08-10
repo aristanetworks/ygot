@@ -22,8 +22,8 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	"github.com/kylelemons/godebug/pretty"
-	"github.com/openconfig/ygot/testutil"
-	"github.com/openconfig/ygot/util"
+	"github.com/aristanetworks/ygot/testutil"
+	"github.com/aristanetworks/ygot/util"
 
 	"github.com/openconfig/gnmi/errdiff"
 	gnmipb "github.com/openconfig/gnmi/proto/gnmi"

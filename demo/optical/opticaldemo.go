@@ -20,26 +20,26 @@ package main
 import (
 	"fmt"
 
-	log "github.com/golang/glog"
-	oc "github.com/openconfig/ygot/exampleoc"
-	"github.com/openconfig/ygot/ygot"
+	log "github.com/aristanetworks/glog"
+	oc "github.com/aristanetworks/ygot/exampleoc"
+	"github.com/aristanetworks/ygot/ygot"
 )
 
 func main() {
 	i, err := CreateDemoOpticalInstance()
 	if err != nil {
-		log.Exitf("Error in OpenConfig optical demo instance creation: %v", err)
+		log.Fatalf("Error in OpenConfig optical demo instance creation: %v", err)
 	}
 
 	json, err := OutputJSON(i)
 	if err != nil {
-		log.Exitf("Error in OpenConfig optical demo: %v", err)
+		log.Fatalf("Error in OpenConfig optical demo: %v", err)
 	}
 	fmt.Println(json)
 
 	ietfjson, err := OutputIETFJSON(i)
 	if err != nil {
-		log.Exitf("Error in IETF JSON demo: %v", err)
+		log.Fatalf("Error in IETF JSON demo: %v", err)
 	}
 	fmt.Println(ietfjson)
 }

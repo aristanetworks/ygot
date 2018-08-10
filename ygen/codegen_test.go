@@ -23,10 +23,10 @@ import (
 	"reflect"
 	"testing"
 
+	"github.com/aristanetworks/ygot/testutil"
 	"github.com/kylelemons/godebug/pretty"
 	"github.com/openconfig/gnmi/errdiff"
 	"github.com/openconfig/goyang/pkg/yang"
-	"github.com/openconfig/ygot/testutil"
 )
 
 const (

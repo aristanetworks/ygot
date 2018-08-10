@@ -22,10 +22,10 @@ import (
 	"strings"
 	"text/template"
 
-	log "github.com/golang/glog"
+	log "github.com/aristanetworks/glog"
 
+	"github.com/aristanetworks/ygot/ygot"
 	"github.com/openconfig/goyang/pkg/yang"
-	"github.com/openconfig/ygot/ygot"
 )
 
 const (
@@ -39,10 +39,10 @@ const (
 	defaultPackageName string = "ocstructs"
 	// DefaultYgotImportPath is the default import path used for the ygot library
 	// in the generated code.
-	DefaultYgotImportPath string = "github.com/openconfig/ygot/ygot"
+	DefaultYgotImportPath string = "github.com/aristanetworks/ygot/ygot"
 	// DefaultYtypesImportPath is the default import path used for the ytypes library
 	// in the generated code.
-	DefaultYtypesImportPath string = "github.com/openconfig/ygot/ytypes"
+	DefaultYtypesImportPath string = "github.com/aristanetworks/ygot/ytypes"
 	// DefaultGoyangImportPath is the default path for the goyang/pkg/yang library that
 	// is used in the generated code.
 	DefaultGoyangImportPath string = "github.com/openconfig/goyang/pkg/yang"
