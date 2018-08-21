@@ -319,6 +319,13 @@ import (
 	"{{ .GoOptions.YtypesImportPath }}"
 {{- end }}
 )
+
+var _ = json.Unmarshal
+var _ = fmt.Println
+var _ = reflect.ValueOf
+var _ = yang.CamelCase
+var _ = ytypes.GetOrCreateNode
+var _ = ygot.Bool
 `
 
 	// goOneOffHeaderTemplate defines the template for package code that should
